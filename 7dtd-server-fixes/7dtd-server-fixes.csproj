@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{81DA7F87-1A66-4920-AADA-6EAF1971F8D0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>7dtd-server-fixes</AssemblyName>
+    <RootNamespace>AllocsFixes</RootNamespace>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Mods\Allocs_CommonFunc</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release_Version|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Mods\Allocs_CommonFunc</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CustomCommands>
+      <CustomCommands>
+        <Command type="AfterBuild" command="bash -c &quot;${SolutionDir}/versions.sh &gt; ${TargetDir}/${ProjectName}_version.txt&quot;" workingdir="${SolutionDir}" />
+      </CustomCommands>
+    </CustomCommands>
+    <ConsolePause>false</ConsolePause>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release_Profiler|AnyCPU' ">
+    <OutputPath>..\bin\Mods\Allocs_CommonFunc\</OutputPath>
+    <DefineConstants>ENABLE_PROFILER</DefineConstants>
+    <Optimize>true</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\bin\Mods\Allocs_CommonFunc\</OutputPath>
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\7dtd-binaries\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="mscorlib">
+      <HintPath>..\7dtd-binaries\mscorlib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\7dtd-binaries\System.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\7dtd-binaries\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LogLibrary">
+      <HintPath>..\7dtd-binaries\LogLibrary.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>..\7dtd-binaries\Assembly-CSharp-firstpass.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\7dtd-binaries\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\7dtd-binaries\UnityEngine.ImageConversionModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="src\AssemblyInfo.cs" />
+    <Compile Include="src\JSON\JsonManualBuilder.cs" />
+    <Compile Include="src\LiveData\Animals.cs" />
+    <Compile Include="src\LiveData\Hostiles.cs" />
+    <Compile Include="src\PersistentData\PersistentContainer.cs" />
+    <Compile Include="src\PersistentData\InvItem.cs" />
+    <Compile Include="src\PersistentData\Inventory.cs" />
+    <Compile Include="src\PersistentData\Players.cs" />
+    <Compile Include="src\PersistentData\Player.cs" />
+    <Compile Include="src\JSON\JSONNode.cs" />
+    <Compile Include="src\JSON\JSONArray.cs" />
+    <Compile Include="src\JSON\JSONObject.cs" />
+    <Compile Include="src\JSON\JSONNumber.cs" />
+    <Compile Include="src\JSON\JSONString.cs" />
+    <Compile Include="src\JSON\JSONBoolean.cs" />
+    <Compile Include="src\BlockingQueue.cs" />
+    <Compile Include="src\JSON\Parser.cs" />
+    <Compile Include="src\JSON\JSONNull.cs" />
+    <Compile Include="src\JSON\MalformedJSONException.cs" />
+    <Compile Include="src\FileCache\AbstractCache.cs" />
+    <Compile Include="src\FileCache\DirectAccess.cs" />
+    <Compile Include="src\FileCache\SimpleCache.cs" />
+    <Compile Include="src\FileCache\MapTileCache.cs" />
+    <Compile Include="src\API.cs" />
+    <Compile Include="src\AllocsUtils.cs" />
+    <Compile Include="src\LandClaimList.cs" />
+    <Compile Include="src\PersistentData\Attributes.cs" />
+    <Compile Include="src\JSON\JSONValue.cs" />
+    <Compile Include="src\LiveData\EntityFilterList.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="src\" />
+    <Folder Include="src\PersistentData\" />
+    <Folder Include="src\JSON\Parser\" />
+    <Folder Include="src\FileCache\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ModInfo.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

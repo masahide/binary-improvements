@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7dtd-server-fixes", "7dtd-server-fixes\7dtd-server-fixes.csproj", "{81DA7F87-1A66-4920-AADA-6EAF1971F8D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AllocsCommands", "AllocsCommands\AllocsCommands.csproj", "{E273D042-57F9-4E2E-8268-5053527E5287}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAndMapRendering", "MapRendering\WebAndMapRendering.csproj", "{A1847B5F-7BFC-4BCD-94AA-A6C9FB7E7C54}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Release|Any CPU = Release|Any CPU
+		Release_Version|Any CPU = Release_Version|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Release_Profiler|Any CPU = Release_Profiler|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{81DA7F87-1A66-4920-AADA-6EAF1971F8D0}.Release_Version|Any CPU.ActiveCfg = Release_Version|Any CPU
+		{81DA7F87-1A66-4920-AADA-6EAF1971F8D0}.Release_Version|Any CPU.Build.0 = Release_Version|Any CPU
+		{81DA7F87-1A66-4920-AADA-6EAF1971F8D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81DA7F87-1A66-4920-AADA-6EAF1971F8D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81DA7F87-1A66-4920-AADA-6EAF1971F8D0}.Release_Profiler|Any CPU.ActiveCfg = Release_Profiler|Any CPU
+		{81DA7F87-1A66-4920-AADA-6EAF1971F8D0}.Release_Profiler|Any CPU.Build.0 = Release_Profiler|Any CPU
+		{81DA7F87-1A66-4920-AADA-6EAF1971F8D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81DA7F87-1A66-4920-AADA-6EAF1971F8D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1847B5F-7BFC-4BCD-94AA-A6C9FB7E7C54}.Release_Version|Any CPU.ActiveCfg = Release|Any CPU
+		{A1847B5F-7BFC-4BCD-94AA-A6C9FB7E7C54}.Release_Version|Any CPU.Build.0 = Release|Any CPU
+		{A1847B5F-7BFC-4BCD-94AA-A6C9FB7E7C54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1847B5F-7BFC-4BCD-94AA-A6C9FB7E7C54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1847B5F-7BFC-4BCD-94AA-A6C9FB7E7C54}.Release_Profiler|Any CPU.ActiveCfg = Release_Profiler|Any CPU
+		{A1847B5F-7BFC-4BCD-94AA-A6C9FB7E7C54}.Release_Profiler|Any CPU.Build.0 = Release_Profiler|Any CPU
+		{A1847B5F-7BFC-4BCD-94AA-A6C9FB7E7C54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1847B5F-7BFC-4BCD-94AA-A6C9FB7E7C54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E273D042-57F9-4E2E-8268-5053527E5287}.Release_Version|Any CPU.ActiveCfg = Release|Any CPU
+		{E273D042-57F9-4E2E-8268-5053527E5287}.Release_Version|Any CPU.Build.0 = Release|Any CPU
+		{E273D042-57F9-4E2E-8268-5053527E5287}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E273D042-57F9-4E2E-8268-5053527E5287}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E273D042-57F9-4E2E-8268-5053527E5287}.Release_Profiler|Any CPU.ActiveCfg = Release_Profiler|Any CPU
+		{E273D042-57F9-4E2E-8268-5053527E5287}.Release_Profiler|Any CPU.Build.0 = Release_Profiler|Any CPU
+		{E273D042-57F9-4E2E-8268-5053527E5287}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E273D042-57F9-4E2E-8268-5053527E5287}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = 7dtd-server-fixes\7dtd-server-fixes.csproj
+		outputpath = bin
+	EndGlobalSection
+EndGlobal

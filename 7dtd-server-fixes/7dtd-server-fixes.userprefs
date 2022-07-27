@@ -1,0 +1,18 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/AllocsLogFunctions.cs">
+    <Files>
+      <File FileName="src/AllocsNetTelnetServer.cs" Line="166" Column="29" />
+      <File FileName="src/AllocsTelnetConnection.cs" Line="5" Column="36" />
+      <File FileName="src/AllocsLogFunctions.cs" Line="29" Column="3" />
+      <File FileName="src/CommonMappingFunctions.cs" Line="121" Column="5" />
+      <File FileName="src/CommandExtensions.cs" Line="20" Column="26" />
+      <File FileName="src/TelnetCommands/PrivateMassageConnections.cs" Line="15" Column="26" />
+      <File FileName="src/ConsoleOutputSeparator.cs" Line="52" Column="47" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

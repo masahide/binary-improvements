@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A1847B5F-7BFC-4BCD-94AA-A6C9FB7E7C54}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>MapRendering</RootNamespace>
+    <AssemblyName>MapRendering</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Mods\Allocs_WebAndMapRendering\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release_Profiler|AnyCPU' ">
+    <OutputPath>..\bin\Mods\Allocs_WebAndMapRendering\</OutputPath>
+    <DefineConstants>ENABLE_PROFILER</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\bin\Mods\Allocs_WebAndMapRendering\</OutputPath>
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\7dtd-binaries\Assembly-CSharp-firstpass.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LogLibrary">
+      <HintPath>..\7dtd-binaries\LogLibrary.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <HintPath>..\7dtd-binaries\mscorlib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\7dtd-binaries\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\7dtd-binaries\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="mscorlib">
+      <HintPath>..\7dtd-binaries\mscorlib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <HintPath>..\7dtd-binaries\System.Xml.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\7dtd-binaries\System.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\7dtd-binaries\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\7dtd-binaries\UnityEngine.ImageConversionModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="MapRendering\MapRendering.cs" />
+    <Compile Include="MapRendering\MapRenderBlockBuffer.cs" />
+    <Compile Include="MapRendering\Constants.cs" />
+    <Compile Include="Commands\RenderMap.cs" />
+    <Compile Include="Commands\EnableRendering.cs" />
+    <Compile Include="API.cs" />
+    <Compile Include="Web\API\GetAnimalsLocation.cs" />
+    <Compile Include="Web\API\GetHostileLocation.cs" />
+    <Compile Include="Web\API\Null.cs" />
+    <Compile Include="Web\SSE\EventLog.cs" />
+    <Compile Include="Web\SSE\SseHandler.cs" />
+    <Compile Include="Web\SSE\EventBase.cs" />
+    <Compile Include="Web\Web.cs" />
+    <Compile Include="Web\MimeType.cs" />
+    <Compile Include="Web\API\GetPlayersOnline.cs" />
+    <Compile Include="Web\API\WebAPI.cs" />
+    <Compile Include="Web\API\GetPlayersLocation.cs" />
+    <Compile Include="Web\API\GetPlayerInventory.cs" />
+    <Compile Include="Web\API\GetLandClaims.cs" />
+    <Compile Include="Commands\webstat.cs" />
+    <Compile Include="Web\API\GetStats.cs" />
+    <Compile Include="Web\WebConnection.cs" />
+    <Compile Include="Web\OpenID.cs" />
+    <Compile Include="Web\ConnectionHandler.cs" />
+    <Compile Include="Web\WebPermissions.cs" />
+    <Compile Include="Web\Handlers\ApiHandler.cs" />
+    <Compile Include="Web\Handlers\ItemIconHandler.cs" />
+    <Compile Include="Web\Handlers\PathHandler.cs" />
+    <Compile Include="Web\Handlers\SimpleRedirectHandler.cs" />
+    <Compile Include="Web\Handlers\StaticHandler.cs" />
+    <Compile Include="Web\Handlers\SessionHandler.cs" />
+    <Compile Include="Web\API\ExecuteConsoleCommand.cs" />
+    <Compile Include="Commands\ReloadWebPermissions.cs" />
+    <Compile Include="Web\Handlers\UserStatusHandler.cs" />
+    <Compile Include="Commands\WebTokens.cs" />
+    <Compile Include="Commands\WebPermissionsCmd.cs" />
+    <Compile Include="Web\LogBuffer.cs" />
+    <Compile Include="Web\API\GetLog.cs" />
+    <Compile Include="Web\API\GetWebUIUpdates.cs" />
+    <Compile Include="Web\API\GetServerInfo.cs" />
+    <Compile Include="Web\API\GetPlayerList.cs" />
+    <Compile Include="Web\WebCommandResult.cs" />
+    <Compile Include="Web\API\GetAllowedCommands.cs" />
+    <Compile Include="Commands\EnableOpenIDDebug.cs" />
+    <Compile Include="Web\API\GetPlayerInventories.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\7dtd-server-fixes\7dtd-server-fixes.csproj">
+      <Project>{81DA7F87-1A66-4920-AADA-6EAF1971F8D0}</Project>
+      <Name>7dtd-server-fixes</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ModInfo.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="steam-intermediate.cer">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="steam-rootca.cer">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>
